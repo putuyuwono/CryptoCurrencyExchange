@@ -1,0 +1,110 @@
+﻿<Window x:Class="CryptocurrencyExchange.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CryptocurrencyExchange"
+        mc:Ignorable="d" SizeToContent="WidthAndHeight"
+        Title="CryptoEx" Topmost="True">
+    <Border BorderThickness="5">
+        <Grid>
+            <Grid.Resources>
+                <Style x:Key="CrypLabel" TargetType="Label">
+                    <Setter Property="ContentStringFormat" Value="N8"/>
+                </Style>
+                <Style x:Key="FiatLabel" TargetType="Label">
+                    <Setter Property="ContentStringFormat" Value="N8"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="="/>
+            <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding SatValue, Mode=TwoWay}" Width="70" HorizontalAlignment="Right" HorizontalContentAlignment="Right" />
+            <Label Grid.Row="0" Grid.Column="4" Content="SAT"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="="/>
+            <Label Grid.Row="1" Grid.Column="3" Content="{Binding BtcValue}" Width="70" HorizontalAlignment="Right" HorizontalContentAlignment="Right" />
+            <Label Grid.Row="1" Grid.Column="4" Content="BTC"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="2" Grid.Column="2" Content="="/>
+            <Label Grid.Row="2" Grid.Column="3" Content="{Binding ConvEthValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="2" Grid.Column="4" Content="ETH"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="3" Grid.Column="2" Content="="/>
+            <Label Grid.Row="3" Grid.Column="3" Content="{Binding ConvEtcValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="3" Grid.Column="4" Content="ETC"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="4" Grid.Column="2" Content="="/>
+            <Label Grid.Row="4" Grid.Column="3" Content="{Binding ConvLtcValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="4" Grid.Column="4" Content="LTC"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="5" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="5" Grid.Column="2" Content="="/>
+            <Label Grid.Row="5" Grid.Column="3" Content="{Binding ConvWavesValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="5" Grid.Column="4" Content="WAVES"/>
+            <Label Grid.Row="6" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="6" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="6" Grid.Column="2" Content="="/>
+            <Label Grid.Row="6" Grid.Column="3" Content="{Binding ConvDashValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="6" Grid.Column="4" Content="DASH"/>
+            <Label Grid.Row="7" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="7" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="7" Grid.Column="2" Content="="/>
+            <Label Grid.Row="7" Grid.Column="3" Content="{Binding ConvXmrValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="7" Grid.Column="4" Content="XMR"/>
+            <Label Grid.Row="8" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="8" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="8" Grid.Column="2" Content="="/>
+            <Label Grid.Row="8" Grid.Column="3" Content="{Binding ConvDogeValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="8" Grid.Column="4" Content="DOGE"/>
+            <Label Grid.Row="9" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="9" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="9" Grid.Column="2" Content="="/>
+            <Label Grid.Row="9" Grid.Column="3" Content="{Binding ConvBchValue}" Style="{StaticResource CrypLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="9" Grid.Column="4" Content="BCH"/>
+            <Label Grid.Row="10" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="10" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="10" Grid.Column="2" Content="="/>
+            <Label Grid.Row="10" Grid.Column="3" Content="{Binding ConvRUBValue}" Style="{StaticResource FiatLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="10" Grid.Column="4" Content="RUB"/>
+            <Label Grid.Row="11" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="11" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="11" Grid.Column="2" Content="="/>
+            <Label Grid.Row="11" Grid.Column="3" Content="{Binding ConvKRWValue}" Style="{StaticResource FiatLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="11" Grid.Column="4" Content="KRW"/>
+            <Label Grid.Row="12" Grid.Column="0" Content="1" HorizontalAlignment="Right"/>
+            <Label Grid.Row="12" Grid.Column="1" Content="COIN"/>
+            <Label Grid.Row="12" Grid.Column="2" Content="="/>
+            <Label Grid.Row="12" Grid.Column="3" Content="{Binding ConvUSDValue}" Style="{StaticResource FiatLabel}" HorizontalAlignment="Right"/>
+            <Label Grid.Row="12" Grid.Column="4" Content="USD"/>
+            <Button Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="5" x:Name="btRefresh" Content="Refresh" Click="btRefresh_Click"/>
+        </Grid>
+    </Border>
+</Window>
